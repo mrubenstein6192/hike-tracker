@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getSavedHikes, saveHike, removeHike, getHikeById} = require ('../../controllers/hike-controller.js');
+const { getSavedHikes, saveHike, removeHike, getHikeById} = require ('../../controllers/hike-controller');
 
 // Get and Post at api/hikes
 router 
@@ -10,7 +10,7 @@ router
 
   // Delete at /api/books/:id
   router 
-    .route("/id")
+    .route("/:id")
     .get(getHikeById)
     .delete(removeHike);
 
