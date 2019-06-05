@@ -12,6 +12,10 @@ const HikeSchema = new Schema({
     type: String,
     required: true 
   },
+  date: {
+    type: String,
+    required: true
+  },
   distance: {
     type: Number
   },
