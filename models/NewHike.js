@@ -13,8 +13,7 @@ const HikeSchema = new Schema({
     required: true 
   },
   date: {
-    type: String,
-    required: true
+    type: String
   },
   distance: {
     type: Number

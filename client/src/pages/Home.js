@@ -1,4 +1,6 @@
 import React from 'react';
+import Research from '../components/Research';
+
 
 function Home() {
   return (
@@ -16,21 +18,31 @@ function Home() {
             fontWeight: 'bold',
             color: 'black',
           }}>Welcome to MyHikes!</h1>
+           <a class="btn-lg btn-danger my-3 text-center" href="/auth/google">Sign in with Google</a>
         </div>
 
         <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-md-12">
+        <div className="row">
+          <div className="col-12 col-md-8">
             <h2 className="display-4">Our Mission</h2>
-            <p>For the inexperienced, the expert, or anyone in between, MyHikes is designed to help you make the most of your hiking memories!</p>
-            <p>Keep track of all of your hikes as you complete them!</p>
+            <p>Designed for all levels of hikers!</p>
             <p>Research hikes you would like to do in the future!</p>
+            <p>Keep track of all of your hikes as you complete them!</p>
             <p>Look back with pride on all of the great experiences you've had!</p>
           </div>
+          
+        <div className = "col-12 col-md-4">
+          <div className = "card">
+            <div className = "card-header bg-light text-center">Find Your Next Hikes</div>
+            <div className = "card-body">
+              <Research />
+            </div>
+          </div>
         </div>
-      </div>
+        </div>
+        </div>
+    
     </React.Fragment>
   );
 }
-
 export default Home;

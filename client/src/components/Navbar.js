@@ -14,14 +14,24 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link text-light mx-2" to="/FutureHikes">
+          {/* <li className="nav-item">
+            <Link className="nav-link text-light mx-2" to="/AddHike">
               Add a Hike
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link className="nav-link text-light mx-2" to="/MyHikes">
               Completed Hikes
+            </Link>
+          </li>
+          {/* <li className="nav-item">
+            <Link className="nav-link text-light mx-2" to="/PlanHike">
+              Plan a Hike
+            </Link>
+          </li> */}
+          <li className="nav-item">
+            <Link className="nav-link text-light mx-2" to="/PlannedHikes">
+              Hikes to Do
             </Link>
           </li>
         </ul>

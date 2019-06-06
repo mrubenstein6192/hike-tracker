@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { getHikeById, createHike } from '../utils/API';
 
 
-class AddHike extends Component {
+class AddaHike extends Component {
  
   state = {
     name: '',
@@ -95,7 +95,7 @@ class AddHike extends Component {
          textAlign: "center",
          fontSize: "xx-large"
         }}>
-          Add a Hike!
+          Add a Completed Hike!
         </div>
         <div className="container">
           <div className="row justify-content-center">
@@ -201,4 +201,4 @@ class AddHike extends Component {
   }
 }
 
-export default AddHike;
+export default AddaHike;

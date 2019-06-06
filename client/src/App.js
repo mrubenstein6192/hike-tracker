@@ -1,25 +1,30 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from "./pages/Home";
-import FutureHikes from "./pages/FutureHikes";
+import AddHike from "./pages/AddHike";
 import MyHikes from "./pages/MyHikes";
 import Navbar from "../src/components/Navbar";
+import PlanHike from './pages/PlanHike';
+import Planned from './pages/PlannedHikes';
 
 
 
-function App() {
+function App () {
+  
   return (
   <Router>
-    <div>
+    
       <Navbar />
       <Switch>
         <Route exact path = "/" component = {Home} />
         <Route exact path = "/home" component = {Home} />
-        <Route exact path = "/futurehikes" component = {FutureHikes} />
+        <Route exact path = "/addhike" component = {AddHike} />
         <Route exact path = "/myhikes" component = {MyHikes} />
+        <Route exact path = "/planhike" component = {PlanHike} />
+        <Route exact path = "/plannedhikes" component = {Planned} />
         <Route render = {() => <h2>404 page!</h2>} />
       </Switch>
-    </div>
+    
   </Router>
   );
 }

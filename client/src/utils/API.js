@@ -18,9 +18,29 @@ export const removeHike = (hikeId) => {
   return axios.delete(`/api/hikes/${hikeId}`)
 }
 
+export const planHike = (hikeInfo) => {
+  return axios.post('/api/plannedhikes', hikeInfo)
+}
+
+export const getPlannedHikes = () => {
+  return axios.get('/api/plannedhikes')
+}
+
+export const getPlannedHikeById = (hikeId) => {
+  return axios.get(`/api/plannedhikes/${hikeId}`)
+}
+
+export const removePlannedHike = (hikeId) => {
+  return axios.delete(`/api/plannedhikes/${hikeId}`)
+}
+
 export default {
   getSavedHikes,
   getHikeById,
   createHike,
-  removeHike
+  removeHike,
+  planHike,
+  getPlannedHikes,
+  getPlannedHikeById,
+  removePlannedHike
 }

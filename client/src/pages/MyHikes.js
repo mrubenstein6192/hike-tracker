@@ -30,6 +30,15 @@ class Saved extends Component {
   render() {
     return(
       <React.Fragment>
+        <div className = "jumbotron jumbotron-fluid text-center"
+         style = {{
+          backgroundImage: 'url()',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '200px'
+        }}>
+          <a class="btn btn-lg btn-info text-center" href="/addhike">Add a Completed Hike!</a>
+        </div>
        <div className = "container-fluid my-3">
          <Row>
            {!this.state.hikeList.length ? (
@@ -37,11 +46,11 @@ class Saved extends Component {
            ) : (
              this.state.hikeList.map(hike => {
                return (
-                 <Col key = {hike._id} md = {4}>
+                 <Col key = {hike._id} md = {3}>
                    <div className = "card">
-                   <div className = "card-header text-center bg-success">Hike</div>
+                   <div className = "card-header text-center bg-light">{hike.name}</div>
                     <div className = "card-body">
-                      <p>{hike.name}</p>
+                      
                       <p>Location: {hike.location}</p>
                       <p>Date Completed: {hike.date}</p>
                       <p>Length: {hike.distance} miles</p>
