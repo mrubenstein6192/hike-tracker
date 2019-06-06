@@ -18,7 +18,7 @@ function Home() {
             fontWeight: 'bold',
             color: 'black',
           }}>Welcome to MyHikes!</h1>
-           <a class="btn-lg btn-danger my-3 text-center" href="/auth/google">Sign in with Google</a>
+           <a className="btn-lg btn-danger my-3 text-center" href="/auth/google">Sign in with Google</a>
         </div>
 
         <div className="container">

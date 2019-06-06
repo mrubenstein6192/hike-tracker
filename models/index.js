@@ -1,7 +1,7 @@
 const Hike = require('./NewHike');
-const User = require('./User');
+const Planned = require('./PlannedHike')
 
 module.exports = {
   Hike,
-  User
+  Planned
 };

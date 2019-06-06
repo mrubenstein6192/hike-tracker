@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { removePlannedHike, getPlannedHikes } from '../utils/API';
 
+
 import Col from "../components/Col";
 import Row from "../components/Row";
 
@@ -21,8 +22,8 @@ class Planned extends Component {
     .catch(err => console.log(err));
   };
 
-  handleRemoveHike = hikeId => {
-    removePlannedHike(hikeId)
+  handleRemoveHike = plannedId => {
+    removePlannedHike(plannedId)
     .then(this.handleGetPlannedHikes)
     .catch(err => console.log(err));
   };
@@ -37,7 +38,7 @@ class Planned extends Component {
             backgroundPosition: 'center',
             height: '200px'
           }}>
-          <a class="btn btn-lg btn-info text-center" href="/planhike">Plan a Future Hike!</a>
+          <a className="btn btn-lg btn-info text-center" href="/planhike">Plan a Future Hike!</a>
         </div>
        <div className = "container-fluid my-3">
          <Row>

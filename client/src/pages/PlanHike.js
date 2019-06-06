@@ -13,9 +13,9 @@ class PlanHike extends Component {
     console.log(this.props);
 
     if (this.props.match.params.id) {
-      const hikeId = this.props.match.params.id;
+      const plannedId = this.props.match.params.id;
 
-      getPlannedHikeById(hikeId)
+      getPlannedHikeById(plannedId)
       .then(({ data: hikeData }) => {
         this.setState({
           id: hikeData._id,

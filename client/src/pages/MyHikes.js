@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { removeHike, getSavedHikes } from '../utils/API';
 
+
 import Col from "../components/Col";
 import Row from "../components/Row";
 
@@ -37,7 +38,7 @@ class Saved extends Component {
           backgroundPosition: 'center',
           height: '200px'
         }}>
-          <a class="btn btn-lg btn-info text-center" href="/addhike">Add a Completed Hike!</a>
+          <a className="btn btn-lg btn-info text-center" href="/addhike">Add a Completed Hike!</a>
         </div>
        <div className = "container-fluid my-3">
          <Row>
