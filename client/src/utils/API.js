@@ -14,6 +14,12 @@ export const createHike = (hikeInfo) => {
   return axios.post('/api/hikes', hikeInfo)
 }
 
+// updateHike
+// takes in object => {title: "title", body: "body"} AND note's id
+export const updateHike = (hikeId, hikeInfo) => {
+  return axios.put(`/api/hikes/${hikeId}`, hikeInfo)
+}
+
 export const removeHike = (hikeId) => {
   return axios.delete(`/api/hikes/${hikeId}`)
 }
@@ -39,6 +45,7 @@ export default {
   getHikeById,
   createHike,
   removeHike,
+  updateHike,
   planHike,
   getPlannedHikes,
   getPlannedHikeById,

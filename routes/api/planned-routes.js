@@ -4,7 +4,7 @@ const { getPlannedHikes, planHike, removePlannedHike, getPlannedHikeById} = requ
 
 // Get and Post at api/hikes
 router
-  .route('/plannedhikes')
+  .route('/')
   .get(getPlannedHikes)
   .post(planHike);
 

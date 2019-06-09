@@ -8,7 +8,6 @@ import PlanHike from './pages/PlanHike';
 import Planned from './pages/PlannedHikes';
 
 
-
 function App () {
   
   return (
@@ -24,6 +23,7 @@ function App () {
         <Route exact path = "/plannedhikes" component = {Planned} />
         <Route render = {() => <h2>404 page!</h2>} />
       </Switch>
+
     
   </Router>
   );

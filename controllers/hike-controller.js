@@ -33,6 +33,7 @@ const saveHike = (req, res) => {
     });
 };
 
+
 //this will run when DELETE /api/hikes/:id is hit
 const removeHike = (req, res) => {
   Hike.remove({

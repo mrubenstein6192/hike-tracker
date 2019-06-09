@@ -58,6 +58,8 @@ class AddaHike extends Component {
       .catch(err => console.log(err));
   }
 
+ 
+
   // handleInputChange
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -67,8 +69,10 @@ class AddaHike extends Component {
   };
 
   handleFormSubmit = event => {
+
     event.preventDefault();
 
+  
       this.handleCreateHike({
         name: this.state.name,
         location: this.state.location,
@@ -80,6 +84,7 @@ class AddaHike extends Component {
         experience: this.state.experience
       });
     }
+  
 
   render() {
     // if hike has been saved, let's redirect to the myhikes page

@@ -12,6 +12,7 @@ router
   router 
     .route("/:id")
     .get(getHikeById)
-    .delete(removeHike);
+    .delete(removeHike)
+
 
     module.exports = router;

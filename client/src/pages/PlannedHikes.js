@@ -33,12 +33,16 @@ class Planned extends Component {
       <React.Fragment>
          <div className = "jumbotron jumbotron-fluid text-center"
           style = {{
-            backgroundImage: 'url()',
+            backgroundImage: 'url(https://i.pinimg.com/originals/df/80/b9/df80b95c6e1ab48395882dfd6ccf08db.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            height: '200px'
-          }}>
-          <a className="btn btn-lg btn-info text-center" href="/planhike">Plan a Future Hike!</a>
+            height: '300px'
+          }}><h1 
+          style = {{
+            color: "white",
+            fontWeight: "bold"
+          }}>To-Do List</h1>
+          <a className="btn btn-lg btn-info text-center my-2" href="/planhike">Plan a Future Hike!</a>
         </div>
        <div className = "container-fluid my-3">
          <Row>
@@ -49,12 +53,12 @@ class Planned extends Component {
                return (
                  <Col key = {planned._id} md = {4}>
                    <div className = "card">
-                   <div className = "card-header text-center bg-success">Hike</div>
+                  
                     <div className = "card-body">
-                      <p>{planned.name}</p>
-                      <p>Location: {planned.location}</p>
-                      <button onClick={() => this.handleRemoveHike(planned._id)}
-                      className = "btn btn-danger btn-sm">Remove Hike From List</button>
+                      <p><strong>Name: </strong>{planned.name}</p>
+                      <p><strong>Location: </strong>{planned.location}</p>
+                      <a className = "btn btn-success text-center my-2" href = "/addhike" onClick={() => this.handleRemoveHike(planned._id)}>I Have Completed This Hike!</a>
+                      <button className = "btn btn-danger" onClick={() => this.handleRemoveHike(planned._id)}>I Don't Want to do This Hike Anymore </button>
                    </div>
                    </div>
                  </Col>

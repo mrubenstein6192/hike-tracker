@@ -33,12 +33,16 @@ class Saved extends Component {
       <React.Fragment>
         <div className = "jumbotron jumbotron-fluid text-center"
          style = {{
-          backgroundImage: 'url()',
+          backgroundImage: 'url(http://www.hikinghydration.com/wp-content/uploads/2015/09/Is-Hiking-or-Running-Better.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '200px'
-        }}>
-          <a className="btn btn-lg btn-info text-center" href="/addhike">Add a Completed Hike!</a>
+          height: '300px'
+        }}><h1
+        style = {{
+          color: "white",
+          fontWeight: "bold"
+        }}>Completed Hikes</h1>
+          <a className="btn btn-lg btn-info text-center my-2" href="/addhike">Add a Completed Hike!</a>
         </div>
        <div className = "container-fluid my-3">
          <Row>
@@ -49,18 +53,20 @@ class Saved extends Component {
                return (
                  <Col key = {hike._id} md = {3}>
                    <div className = "card">
-                   <div className = "card-header text-center bg-light">{hike.name}</div>
+                   <div className = "card-header text-center bg-light"><strong>{hike.name}</strong></div>
                     <div className = "card-body">
                       
-                      <p>Location: {hike.location}</p>
-                      <p>Date Completed: {hike.date}</p>
-                      <p>Length: {hike.distance} miles</p>
-                      <p>Time to Complete: {hike.time}</p>
-                      <p>Difficulty: {hike.difficulty}</p>
-                      <p>Dogs seen: {hike.dogs}</p>
-                      <p>Overall Experience: {hike.experience}</p>
+                      <p><strong>Location: </strong> {hike.location}</p>
+                      <p><strong>Date Completed: </strong>{hike.date}</p>
+                      <p><strong>Length: </strong>{hike.distance} miles</p>
+                      <p><strong>Time to Complete: </strong>{hike.time}</p>
+                      <p><strong>Difficulty: </strong>{hike.difficulty}</p>
+                      <p><strong>Dogs seen: </strong>{hike.dogs}</p>
+                      <p><strong>Overall Experience: </strong>{hike.experience}</p>
                       <button onClick={() => this.handleRemoveHike(hike._id)}
-                      className = "btn btn-danger btn-sm">Remove Hike From List</button>
+                      className = "btn btn-danger btn-sm my-2">Remove Hike From List Entirely</button>
+                      <a className = "btn btn-success btn-sm my-2" href = "/addhike" onClick={() => this.handleRemoveHike(hike._id)}>Update This Hike From Scratch</a>
+                      
                    </div>
                    </div>
                  </Col>
