@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// do I need both?
+
 app.use(cookieParser());
 app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
