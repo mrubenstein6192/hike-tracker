@@ -82,7 +82,7 @@ class App extends React.Component {
   };
   return (
   <Router>
-    <UserContext.Provider value = {this.value}>
+    <UserContext.Provider value = {this.state}>
       <Navbar />
       <Switch>
         <Route exact path = "/" component = {Home} />

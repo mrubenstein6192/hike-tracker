@@ -6,7 +6,7 @@ router
   .route('/logout')
   .get((req, res) => {
   // handle with passport
-    let redirectPath = (process.env.NODE_ENV === "production") ? "/" : "http://localhost:3000"
+  let redirectPath = (process.env.NODE_ENV === "production") ? "https://my-hikes.herokuapp.com" : "http://localhost:3000"
     req.logout();
     res.redirect(redirectPath);
   });

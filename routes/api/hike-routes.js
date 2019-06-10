@@ -1,8 +1,11 @@
 const router = require('express').Router();
+const authCheck = require('../../middleware/authentication');
 
 const { getSavedHikes, saveHike, removeHike, getHikeById} = require ('../../controllers/hike-controller');
 
-// Get and Post at api/hikes
+// // Get and Post at api/hikes
+// router.use(authCheck);
+
 router 
   .route('/')
   .get(getSavedHikes)
