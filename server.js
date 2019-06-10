@@ -30,12 +30,12 @@ app.use(passport.session());
 const routes = require('./routes');
 app.use(routes);
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 // set up mongoose connection
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/hiking-app', {
+  process.env.MONGODB_URI || 'mongodb://localhost/hiking-app', {
   useNewUrlParser: true
 });
 
