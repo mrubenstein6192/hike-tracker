@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-let loginPath = (process.env.NODE_ENV === "production" ? "https://my-hikes.herokuapp.com/auth/google" : "http://localhost:3001/auth/google");
+let loginPath = (process.env.NODE_ENV === "production" ? "https://my-hikes-rubenstein.herokuapp.com/auth/google" : "http://localhost:3001/auth/google");
 
 function LoginButton() {
   return (
