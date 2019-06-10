@@ -53,7 +53,7 @@ class Saved extends Component {
                return (
                  <Col key = {hike._id} md = {3}>
                    <div className = "card">
-                   <div className = "card-header text-center bg-light"><strong>{hike.name}</strong></div>
+                   <div className = "card-header text-center bg-dark text-light"><strong>{hike.name}</strong></div>
                     <div className = "card-body">
                       
                       <p><strong>Location: </strong> {hike.location}</p>

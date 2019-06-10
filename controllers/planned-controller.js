@@ -1,4 +1,3 @@
-//import Hike model
 const { Planned } = require('../models');
 
 // this runs when GET /api/hikes is hit

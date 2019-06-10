@@ -1,22 +1,28 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const logger = require('morgan');
-
+const passportSetup = require('./middleware/passport-setup');
+require('dotenv').config();
+const cookieSession = require('cookie-session');
+const cookieParser = require('cookie-parser');
+const passport = require('passport');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 
-// set up middleware
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// this is unnecessary, just a middleware logger so we can keep track of our requests
-app.use(logger('dev'));
+// do I need both?
+app.use(cookieParser());
+app.use(cookieSession({
+  maxAge: 24 * 60 * 60 * 1000,
+  keys: [process.env.COOKIE_KEY]
+}));
 
-// if app is in production, then serve up client/build as static in express
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+// initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 // turn on routes
 const routes = require('./routes');

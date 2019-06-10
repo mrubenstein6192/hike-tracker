@@ -96,9 +96,14 @@ class AddaHike extends Component {
       <React.Fragment>
         <div className = "jumbotron"
          style = {{
-         backgroundColor: "lightblue",
+          backgroundImage: 'url(http://www.4usky.com/data/out/43/164374662-hiking-wallpapers.jpg)',
+          backgroundPositionY: "30%",
+          backgroundSize: 'cover',
+         color: "black",
          textAlign: "center",
-         fontSize: "xx-large"
+         fontSize: "50px",
+         fontWeight: "bold",
+         height: '300px'
         }}>
           Add a Completed Hike!
         </div>

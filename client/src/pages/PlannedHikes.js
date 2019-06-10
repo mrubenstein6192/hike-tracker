@@ -54,7 +54,10 @@ class Planned extends Component {
                  <Col key = {planned._id} md = {4}>
                    <div className = "card">
                   
-                    <div className = "card-body">
+                    <div className = "card-body bg-light text-dark"
+                    style={{
+                      fontSize: "x-large",
+                    }}>
                       <p><strong>Name: </strong>{planned.name}</p>
                       <p><strong>Location: </strong>{planned.location}</p>
                       <a className = "btn btn-success text-center my-2" href = "/addhike" onClick={() => this.handleRemoveHike(planned._id)}>I Have Completed This Hike!</a>
@@ -70,7 +73,5 @@ class Planned extends Component {
          </React.Fragment>
     )
   }
-
 }
-
 export default Planned;

@@ -66,9 +66,15 @@ class PlanHike extends Component {
         <React.Fragment>
           <div className = "jumbotron"
          style = {{
+          backgroundImage: 'url(https://www.pixel4k.com/wp-content/uploads/2018/10/hiking-to-the-snowy-mountains-4k_1540755438.jpg)',
+          backgroundPosition: "center",
+          backgroundSize: 'cover',
          backgroundColor: "lightblue",
+         color: "black",
          textAlign: "center",
-         fontSize: "xx-large"
+         fontSize: "50px",
+         fontWeight: "bold",
+         height: '300px'
         }}>
           Add a Hike to do Soon!
         </div>
