@@ -2,6 +2,12 @@ import axios from 'axios';
 
 // set up functions for talking to our backend
 
+
+// getUserProfile
+export const getUserProfile = () => {
+  return axios.get('/api/user')
+};
+
 export const getSavedHikes = () => {
   return axios.get('/api/hikes')
 }
@@ -16,9 +22,9 @@ export const createHike = (hikeInfo) => {
 
 // updateHike
 // takes in object => {title: "title", body: "body"} AND note's id
-export const updateHike = (hikeId, hikeInfo) => {
-  return axios.put(`/api/hikes/${hikeId}`, hikeInfo)
-}
+// export const updateHike = (hikeId, hikeInfo) => {
+//   return axios.put(`/api/hikes/${hikeId}`, hikeInfo)
+// }
 
 export const removeHike = (hikeId) => {
   return axios.delete(`/api/hikes/${hikeId}`)
@@ -40,14 +46,20 @@ export const removePlannedHike = (hikeId) => {
   return axios.delete(`/api/plannedhikes/${hikeId}`)
 }
 
+export const loginCheck = () => {
+  return axios.get('/auth/status');
+}
+
 export default {
   getSavedHikes,
   getHikeById,
   createHike,
   removeHike,
-  updateHike,
+  // updateHike,
   planHike,
   getPlannedHikes,
   getPlannedHikeById,
-  removePlannedHike
+  removePlannedHike,
+  getUserProfile,
+  loginCheck
 }

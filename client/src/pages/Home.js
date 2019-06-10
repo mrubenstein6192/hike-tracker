@@ -1,5 +1,6 @@
 import React from 'react';
 import Research from '../components/Research';
+import LoginButton from '../components/Login';
 
 
 function Home() {
@@ -18,7 +19,7 @@ function Home() {
             fontWeight: 'bold',
             color: 'black',
           }}>Welcome to MyHikes!</h1>
-           <a className="btn-lg btn-danger my-3 text-center" href="/auth/google">Sign in with Google</a>
+           <LoginButton />
         </div>
 
         <div className="container"
