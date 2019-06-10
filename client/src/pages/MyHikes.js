@@ -52,7 +52,12 @@ class Saved extends Component {
              this.state.hikeList.map(hike => {
                return (
                  <Col key = {hike._id} md = {3}>
-                   <div className = "card">
+                   <div className = "card"
+                   style = {{
+                    boxShadow: "2px 6px 10px 2px rgba(0,0,0,0.2)",
+                    transition: "0.3s",
+                    borderRadius: "5px"
+                   }}>
                    <div className = "card-header text-center bg-dark text-light"><strong>{hike.name}</strong></div>
                     <div className = "card-body">
                       

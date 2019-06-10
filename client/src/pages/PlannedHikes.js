@@ -52,7 +52,12 @@ class Planned extends Component {
              this.state.hikeListTwo.map(planned => {
                return (
                  <Col key = {planned._id} md = {4}>
-                   <div className = "card">
+                   <div className = "card"
+                   style = {{
+                    boxShadow: "2px 6px 10px 2px rgba(0,0,0,0.2)",
+                    transition: "0.3s",
+                    borderRadius: "5px"
+                   }}>
                   
                     <div className = "card-body bg-light text-dark"
                     style={{

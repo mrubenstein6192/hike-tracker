@@ -109,7 +109,11 @@ class AddaHike extends Component {
         </div>
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-sm-10 col-md-8">
+            <div className="col-12 col-sm-10 col-md-8"
+            style = {{
+              fontSize: "large",
+              color: 'black'
+            }}>
               <form onSubmit={this.handleFormSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">Hike Name</label>
